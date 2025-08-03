@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezra's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #F5F7FA 0%, #E0E7EE 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4A90E2 0%, #50E3C2 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .portrait {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            border: 4px solid white;
+        }
+
+        nav {
+            background: #4A90E2;
+            padding: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #F5A623;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+        }
+
+        h2 {
+            color: #4A90E2;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #50E3C2;
+            padding-bottom: 0.5rem;
+        }
+
+        .bio p, .education p, .interests p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cv-download {
+            display: inline-block;
+            background: linear-gradient(45deg, #4A90E2, #50E3C2);
+            color: white;
+            padding: 0.9rem 1.8rem;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cv-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+        }
+
+        .projects ul, .interests ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .projects li, .interests li {
+            margin-bottom: 1rem;
+        }
+
+        .projects a {
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .projects a:hover {
+            color: #F5A623;
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #F5A623;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: linear-gradient(45deg, #4A90E2, #50E3C2);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .cv-download {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .portrait {
+                width: 120px;
+                height: 120px;
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Ezra.jpeg" alt="Ezra Shitote Portrait" class="portrait">
+        <h1>Ezra Shitote</h1>
+        <p>Web Developer | Designer | Cyber Security</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="bio">
+            <h2>About Me</h2>
+            <div class="bio">
+                <p>I'm a Computer Security and Forensics graduate with practical experience in IT support, network analysis, and cyber threat detection. With proficiency in Python, Wireshark, and Nmap to develop secure and effective cybersecurity solutions.</p>
+                <p>In my free time, I love exploring new technologies, contributing to open-source projects, and learning about the latest trends in web development.</p>
+                <a href="cv/Shitote Ezra CV.pdf" class="cv-download" download>Download My CV</a>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education">
+                <p><strong>Bachelor of Science in Computer Security and Forensics</strong><br>
+                    Jaramogi University, Siaya, Kenya<br>
+                2021 - 2025</p>
+                <p><strong>Relevant Coursework:</strong> Web Development, Data Structures, Algorithms, Database Systems, Cyber Defence</p>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <div class="interests">
+                <ul>
+                    <li>Network security and traffic analysis</li>
+                    <li>Open-Source Contributions</li>
+                    <li>Ethical hacking and penetration testing</li>
+                    <li>Secure database management and protection</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <ul>
+                    <li><a href="https://github.com/Ezra254/Projects.git" target="_blank">Project 1</a> - A denial of service detector app.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="shitoteezra@gmail.com.com">your.email@example.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+254797518407">+254 (795) 518-407</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ezra. All rights reserved.</p>
+    </footer>
+</body>
+</html>
